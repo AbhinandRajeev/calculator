@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./script.js"></script>
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <div class="bg-white p-4 rounded-lg shadow-md w-72">
+    <!-- Display -->
+    <input id="result" type="text" placeholder="0"
+      class="w-full mb-3 p-2 text-right border rounded-md outline-none" readonly>
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-2">
+      <button onclick="clearText()" class="p-2 bg-red-400 text-white rounded">AC</button>
+      <button onclick="lastDigit()" class="p-2 bg-yellow-400 text-white rounded">Back</button>
+      <button onclick="displayNumber('/')" class="p-2 bg-blue-400 text-white rounded">/</button>
+      <button onclick="displayNumber('*')" class="p-2 bg-blue-400 text-white rounded">x</button>
+
+      <button onclick="displayNumber(7)" class="p-2 bg-gray-200 rounded">7</button>
+      <button onclick="displayNumber(8)" class="p-2 bg-gray-200 rounded">8</button>
+      <button onclick="displayNumber(9)" class="p-2 bg-gray-200 rounded">9</button>
+      <button onclick="displayNumber('-')" class="p-2 bg-blue-400 text-white rounded">-</button>
+
+      <button onclick="displayNumber(4)" class="p-2 bg-gray-200 rounded">4</button>
+      <button onclick="displayNumber(5)" class="p-2 bg-gray-200 rounded">5</button>
+      <button onclick="displayNumber(6)" class="p-2 bg-gray-200 rounded">6</button>
+      <button onclick="displayNumber('+')" class="p-2 bg-blue-400 text-white rounded">+</button>
+
+      <button onclick="displayNumber(1)" class="p-2 bg-gray-200 rounded">1</button>
+      <button onclick="displayNumber(2)" class="p-2 bg-gray-200 rounded">2</button>
+      <button onclick="displayNumber(3)" class="p-2 bg-gray-200 rounded">3</button>
+      <button onclick="calculation()" class="p-2 bg-green-400 text-white rounded">=</button>
+
+      <button onclick="displayNumber(0)" class="col-span-2 p-2 bg-gray-200 rounded">0</button>
+      <button onclick="displayNumber('.')" class="p-2 bg-gray-200 rounded">.</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
